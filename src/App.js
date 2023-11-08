@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ProfileCard from "./ProfileCard";
+import alexaimg from "./img/alexa.png";
+import cortana from "./img/cortana.png";
+import siri from "./img/siri.png";
+import "bulma/css/bulma.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <section className="hero">
+        <div className="hero-body">
+          <h1>asistentes</h1>
+        </div>
+      </section>
+
+      <div className="container">
+        <div className="columns is-multiline">
+          <div className="column is-4 is-desktop">
+            <ProfileCard titulo="axa" arroba="alezaxp" img={alexaimg} />
+          </div>
+          <div className="column is-4 is-desktop">
+            <ProfileCard titulo="axa" arroba="alezaxp" img={cortana} />
+          </div>
+
+          <div className="column is-4 is-desktop">
+            <ProfileCard titulo="alex" arroba="alezp" img={siri} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
