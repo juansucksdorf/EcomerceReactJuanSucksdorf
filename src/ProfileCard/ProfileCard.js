@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, } from "react";
+import React from 'react';
 
 function ProfileCard(props) {
   const [count, setConunt] = useState(0);
@@ -45,7 +46,7 @@ function ProfileCard(props) {
             </button>
           </div>
           <div className="column is-6">
-            <span>likes {count} 0</span>
+            <span> Cantidad {count} </span>
           </div>
         </div>
       </div>

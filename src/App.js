@@ -1,28 +1,37 @@
-import ProfileCard from "./ProfileCard";
-import alexaimg from "./img/alexa.png";
-import cortana from "./img/cortana.png";
-import siri from "./img/siri.png";
+import ProfileCard from "./ProfileCard/ProfileCard";
+import zapasNegras from "./img/zapas negras.png";
+import zapasVerdes from "./img/zapas verdes.png";
+import zapasAzules from "./img/zapas azules.avif";
+import NavBar from "./components/NavBar";
+import ItemListConteiner from "./components/ItemListConteiner/ItemListConteiner";
+import React from 'react';
 import "bulma/css/bulma.css";
-function App() {
-  return (
-    <div>
-      <section className="hero">
-        <div className="hero-body">
-          <h1>asistentes</h1>
-        </div>
-      </section>
 
+
+function App() {
+  const containerStyle = {
+    backgroundColor: '#1e4091', 
+  };
+
+  return (
+    <div style={containerStyle}>
+      <div>
+        <NavBar />
+      </div>
+      <section className="hero">
+        <div className="hero-body"></div>
+      </section>
+      <ItemListConteiner greeting={'Bienvenidos'} />
       <div className="container">
         <div className="columns is-multiline">
           <div className="column is-4 is-desktop">
-            <ProfileCard titulo="axa" arroba="alezaxp" img={alexaimg} />
+            <ProfileCard titulo="Convers" arroba="ciudad" img={zapasNegras} />
           </div>
           <div className="column is-4 is-desktop">
-            <ProfileCard titulo="axa" arroba="alezaxp" img={cortana} />
+            <ProfileCard titulo="Running" arroba="run" img={zapasVerdes} />
           </div>
-
           <div className="column is-4 is-desktop">
-            <ProfileCard titulo="alex" arroba="alezp" img={siri} />
+            <ProfileCard titulo="Sport" arroba="ciudad1" img={zapasAzules} />
           </div>
         </div>
       </div>
